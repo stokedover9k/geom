@@ -109,27 +109,24 @@ This returns a new vector (1, 4, 7) while a and b are preserved.
  - Vec3i
    Vectors of degree 3 with integer (int) fields
    
+ - Vecf
+   Vectors with floating point (double) fields
+  
+ - Vec2f
+   Vectors of degree 2 with floating point (double) fields
+   
+ - Vec3f
+   Vectors of degree 3 with floating point (double) fields
+   
  - Operators
    This static class contains the interfaces for operators on vectors.
  
  - Op2i
-   This static class contains several operator objects for Vec2i vectors.
-   These include (at least) the following:
-     - PLUS
-     - MINUS
-     - TIMES
-     - DIVIDE
-     - DOT               - dot product
-     - COMP_WISE_MULT    - component-wise multiplication
-     - COMP_WISE_MAX     - component-wise max
-     - COMP_WISE_MIN     - component-wise minimum
-     - MAX               - maximum element
-     - MIN               - minimum element
-   Note that the operators which return a vector are in place operators: they will change
-   and return the first vector in the input.
-   
  - Op3i
-   This static class contains several operator objects for Vec3i vectors.
+ - Op2f
+ - Op3f
+   These static classes contain several operator objects for Vec2i, Vec3i, Vec2f, and
+   Vec3f vectors respectively.
    These include (at least) the following:
      - PLUS
      - MINUS
