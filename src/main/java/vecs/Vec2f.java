@@ -9,6 +9,10 @@ import vecs.Operators.vvOpV;
 
 public class Vec2f extends Vecf
 {
+	
+	public Vec2f() {
+		super(2);
+	}
 
 	public Vec2f( Vec2f vec ) {
 		super( vec );

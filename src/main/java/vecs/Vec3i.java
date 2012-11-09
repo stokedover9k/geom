@@ -10,6 +10,10 @@ import vecs.Operators.vvOpV;
 
 public class Vec3i extends Veci 
 {
+	public Vec3i() {
+		super(3);
+	}
+	
 	public Vec3i(Vec3i vec) {
 		super(vec);
 	}

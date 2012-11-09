@@ -11,6 +11,10 @@ import vecs.Operators.vvOpV;
 
 public class Vec3f extends Vecf
 {
+	public Vec3f() {
+		super(3);
+	}
+	
 	public Vec3f( Vec3f vec ) {
 		super( vec );
 	}
