@@ -6,6 +6,7 @@
  - 1.a.VECTORS
  - 1.b.OPERATORS
  - 1.c.VECTORS_AND_OPERATORS
+ - 1.d.A_NOTE_ON_COMPARISONS
  - 2.CLASSES
 
 ===============================================================================
@@ -95,6 +96,15 @@ vector pointed to by a.  If vector a needs to be preserved, clone the first
 vector in the operation chain:
   a.clone().op( Op3i.PLUS, b ).op( Op3i.TIMES, 2 ).op( Op3i.MINUS, b );
 This returns a new vector (1, 4, 7) while a and b are preserved.
+
+-------------------------------
+||    1.d.A_NOTE_ON_COMPARISONS
+-------------------------------
+
+Vectors of raw vector types (Veci and Vecf) may be compared to other vectors of
+this without the need for matching degrees.  If the degrees are not equal, the
+vector with smaller degree is imagined to have 0's for the missing components.
+The vectors are compared component-wise starting from the first component (X). 
 
 ===============================================================================
 ||                               2.CLASSES                                   ||
