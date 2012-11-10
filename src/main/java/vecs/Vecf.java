@@ -52,22 +52,22 @@ public class Vecf implements Comparable<Vecf>
 	@Override
 	public int compareTo(Vecf v) {
 		double[] a = _vals, b = v._vals;
-		int flip = 1;
+		int athenb = -1;  // if a < b, -1 is returned
 		if( a.length > b.length ) 
 		{
 			double[] tmp = a;
 			a = b;
 			b = tmp;
-			flip = -1;
+			athenb = 1;
 		}   // a now holds the shorter array
 		// for components in both vectors, compare corresponding components
 		for( int i = 0; i < a.length; i++ )
-			if( a[i] < b[i] )        return -flip;
-			else if( a[i] > b[i] )   return  flip;
+			if( a[i] < b[i] )        return  athenb;
+			else if( a[i] > b[i] )   return -athenb;
 		// for components in only the higher degree vector, compare against 0 values
 		for( int i = a.length; i < b.length; i++ )
-			if( b[i] < 0 )       return -flip;
-			else if( b[i] > 0 )  return  flip;
+			if( b[i] < 0 )       return -athenb;
+			else if( b[i] > 0 )  return  athenb;
 		return 0;
 	}
 

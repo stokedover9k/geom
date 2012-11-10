@@ -52,18 +52,18 @@ public class Veci implements Comparable<Veci>
 	@Override
 	public int compareTo(Veci v) {
 		int[] a = _vals, b = v._vals;
-		int flip = 1;
+		int flip = -1;
 		if( a.length > b.length ) 
 		{
 			int[] tmp = a;
 			a = b;
 			b = tmp;
-			flip = -1;
+			flip = 1;
 		}   // a now holds the shorter array
 		// for components in both vectors, compare corresponding components
 		for( int i = 0; i < a.length; i++ )
 			if( a[i] != b[i] )
-				return (a[i] - b[i]) * flip;
+				return (b[i] - a[i]) * flip;
 		// for components in only the higher degree vector, compare against 0 values
 		for( int i = a.length; i < b.length; i++ )
 			if( b[i] != 0 )
