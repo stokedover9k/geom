@@ -54,7 +54,17 @@ public class Vec3i extends Veci
 		return new Vec3f(this);
 	}
 	
+	//-------------------------------------------------------------
 	
+	public int getX()           { return _vals[0]; }
+	public int getY()           { return _vals[1]; }
+	public int getZ()           { return _vals[2]; }
+	
+	public void   setX(int x)   { _vals[0] = x; }
+	public void   setY(int y)   { _vals[1] = y; }
+	public void   setZ(int y)   { _vals[2] = y; }
+	
+	//-------------------------------------------------------------
 	
 	public  Vec3i op( vOpV<Vec3i> operator )                    { return operator.performOp(this);           }
 	public  Vec3i op( vvOpV<Vec3i> operator, Vec3i operand2 )   { return operator.performOp(this, operand2); }

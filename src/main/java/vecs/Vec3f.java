@@ -65,8 +65,18 @@ public class Vec3f extends Vecf
 		return new Vec3f( this );
 	}
 	
+	//-------------------------------------------------------------
 	
+	public double getX()           { return _vals[0]; }
+	public double getY()           { return _vals[1]; }
+	public double getZ()           { return _vals[2]; }
 	
+	public void   setX(double x)   { _vals[0] = x; }
+	public void   setY(double y)   { _vals[1] = y; }
+	public void   setZ(double y)   { _vals[2] = y; }
+		
+	//-------------------------------------------------------------
+		
 	public  Vec3f op( vOpV<Vec3f> operator )                    { return operator.performOp(this);           }
 	public  Vec3f op( vvOpV<Vec3f> operator, Vec3f operand2 )   { return operator.performOp(this, operand2); }
 	public  Vec3f op( vfOpV<Vec3f> operator, double operand2 )  { return operator.performOp(this, operand2); }

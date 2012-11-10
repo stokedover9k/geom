@@ -43,7 +43,15 @@ public class Vec2i extends Veci
 		return new Vec2f( this );
 	}
 	
+	//-------------------------------------------------------------
 	
+	public int getX()           { return _vals[0]; }
+	public int getY()           { return _vals[1]; }
+	
+	public void   setX(int x)   { _vals[0] = x; }
+	public void   setY(int y)   { _vals[1] = y; }
+	
+	//-------------------------------------------------------------
 	
 	public  Vec2i op( vOpV<Vec2i> operator )                    { return operator.performOp(this);           }
 	public  Vec2i op( vvOpV<Vec2i> operator, Vec2i operand2 )   { return operator.performOp(this, operand2); }

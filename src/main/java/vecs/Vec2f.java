@@ -58,6 +58,14 @@ public class Vec2f extends Vecf
 	
 	//-------------------------------------------------------------
 	
+	public double getX()           { return _vals[0]; }
+	public double getY()           { return _vals[1]; }
+	
+	public void   setX(double x)   { _vals[0] = x; }
+	public void   setY(double y)   { _vals[1] = y; }
+	
+	//-------------------------------------------------------------
+	
 	public  Vec2f op( vOpV<Vec2f> operator )                     { return operator.performOp(this);           }
 	public  Vec2f op( vvOpV<Vec2f> operator, Vec2f operand2 )    { return operator.performOp(this, operand2); }
 	public  Vec2f op( viOpV<Vec2f> operator, int operand2 )      { return operator.performOp(this, operand2); }
