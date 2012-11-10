@@ -151,3 +151,10 @@ The vectors are compared component-wise starting from the first component (X).
    Note that the operators which return a vector are in place operators: they will change
    and return the first vector in the input.
    
+ - Opi
+ - Opf
+   These static classes contain several operators similar to the Op2i, Op2f classes,
+   but which are not restricted in the degree of used vectors.  You should use the
+   degree restricted operators for efficiency when possible because they eliminate 
+   some overhead.
+   
