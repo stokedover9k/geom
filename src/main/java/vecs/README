@@ -157,4 +157,8 @@ The vectors are compared component-wise starting from the first component (X).
    but which are not restricted in the degree of used vectors.  You should use the
    degree restricted operators for efficiency when possible because they eliminate 
    some overhead.
+   <<<NOTE>>>:
+   Some of the operators in these files are not in-place (e.g. component-wise max and
+   min will return a vector of the degree equal to the higher-degree argument).  See files
+   for details.
    
