@@ -1,6 +1,7 @@
 package vecs;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Vecf implements Comparable<Vecf>
 {
@@ -14,12 +15,27 @@ public class Vecf implements Comparable<Vecf>
 		_vals = new double[degree];
 	}
 	
+	public Vecf( double[] vec ) {
+		_vals = vec.clone();
+	}
+	
+	public Vecf( List<Double> vec ) {
+		this( vec.size() );
+		int i = 0;
+		for( Double v : vec )
+			_vals[i++] = v;
+	}
+	
 	public double get( int index ) {
 		return _vals[index];
 	}
 	
 	public void set( int index, double val ) {
 		_vals[index] = val;
+	}
+	
+	public int getDegree() {
+		return _vals.length;
 	}
 	
 	public String toString() {

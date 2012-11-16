@@ -1,6 +1,7 @@
 package vecs;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Veci implements Comparable<Veci> 
 {
@@ -14,12 +15,27 @@ public class Veci implements Comparable<Veci>
 		_vals = new int[degree];
 	}
 	
+	public Veci( int[] vec ) {
+		_vals = vec.clone();
+	}
+
+	public Veci( List<Integer> vec ) {
+		this( vec.size() );
+		int i = 0;
+		for( Integer v : vec )
+			_vals[i++] = v;
+	}
+	
 	public int get( int index ) {
 		return _vals[index];
 	}
 	
 	public void set( int index, int val ) {
 		_vals[index] = val;
+	}
+	
+	public int getDegree() {
+		return _vals.length;
 	}
 	
 	public String toString() {
